@@ -16,20 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xkt-fd-M9v">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xkt-fd-M9v">
                                 <rect key="frame" x="87" y="289" width="240" height="318"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qz-wy-uR0">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="86"/>
+                                        <rect key="frame" x="77" y="0.0" width="86" height="86"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="8Rz-Z8-4Wj"/>
+                                            <constraint firstAttribute="width" constant="86" id="EWG-Sd-7x0"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1X-Gf-kOs">
-                                        <rect key="frame" x="0.0" y="116" width="240" height="86"/>
+                                        <rect key="frame" x="77" y="116" width="86" height="86"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="VGs-fU-w69"/>
+                                            <constraint firstAttribute="width" constant="86" id="WoV-hV-Dyi"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-RL-yin">
-                                        <rect key="frame" x="0.0" y="232" width="240" height="86"/>
+                                        <rect key="frame" x="77" y="232" width="86" height="86"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="86" id="CaM-Sh-XqG"/>
+                                            <constraint firstAttribute="height" constant="86" id="RLu-a2-ybm"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -47,6 +59,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedStart" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4J-f8-Nvj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +74,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Au3-PS-mvZ" secondAttribute="bottom" constant="39" id="qeu-Xq-zIB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="Xkt-fd-M9v" id="E20-b3-hUh"/>
+                        <outlet property="greenView" destination="Odp-RL-yin" id="5oQ-2K-Bvj"/>
+                        <outlet property="redView" destination="2Qz-wy-uR0" id="a8t-eN-7jF"/>
+                        <outlet property="startButton" destination="Au3-PS-mvZ" id="u6w-Cw-F9I"/>
+                        <outlet property="yellowView" destination="j1X-Gf-kOs" id="UAs-Fz-lLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
